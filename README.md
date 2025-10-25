@@ -33,14 +33,3 @@ A[Source Code] --> B[Docker Build]
 B --> C[Kubernetes Deployment]
 C --> D[AWS CloudWatch Logs + Metrics]
 C --> E[Users]
-
-## 🚀 Deployment Workflow
-
-Create Docker images and push to container registry
-
-Deploy Kubernetes manifests to cluster
-
-Configure CloudWatch Agents for log + metric streaming
-
-Enable scaling rules to improve performance and resilience
-

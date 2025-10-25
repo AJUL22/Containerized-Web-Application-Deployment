@@ -37,14 +37,7 @@ C --> E[Users]
 
 
 
-# Project Title
-Short description of the project.
 
-## Installation
-Steps to set up the project.
-
-## Usage
-How to run and use the project.
 
 ## Contributing
 Guidelines for collaborators.

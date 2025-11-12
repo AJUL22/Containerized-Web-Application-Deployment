@@ -45,3 +45,27 @@ Guidelines for collaborators.
 ## License
 Project license details.
 
+
+
+
+# Build & push
+docker build -t myapp:version .
+docker push repo/myapp:version
+
+# Create EKS cluster
+eksctl create cluster --name myapp-cluster --region eu-central-1 --nodes 3
+
+# Deploy to k8s
+kubectl apply -f deployment.yaml
+kubectl get pods,svc
+
+# Autoscale
+kubectl autoscale deployment myapp-deploy --cpu-percent=60 --min=2 --max=10
+
+# Install logging
+helm repo add aws-for-fluent-bit https://aws.github.io/eks-charts
+helm repo update
+helm install fluent-bit aws-for-fluent-bit/aws-for-fluent-bit --set clusterName=myapp-cluster
+
+# Check logs (CloudWatch) via AWS console
+
